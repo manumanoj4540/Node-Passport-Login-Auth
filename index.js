@@ -9,3 +9,7 @@ app.use((req, res, next) => {
     res.setHeader('Content-Type','text/html')
     res.end('<html><div><h1>This is an express Server</h1></div></html>');
 });
+const server = http.createServer(app);
+server.listen(port, hostname, () => {
+    console.log(`Server running @ http://${hostname}:${port}`);
+});
